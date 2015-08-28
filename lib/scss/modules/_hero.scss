@@ -1,0 +1,17 @@
+.hero {
+	background-color: $hero-background-color;
+
+	img {
+		margin-bottom: -0.25em;
+		width: 100%;
+		height: auto;
+	}
+
+	@include bp(xm) {
+		.container {
+			margin: 0 auto;
+			width: 80%;
+			max-width: 60em;
+		}
+	}
+}

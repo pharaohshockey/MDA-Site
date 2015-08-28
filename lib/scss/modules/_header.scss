@@ -1,0 +1,49 @@
+.header-main {
+	background-color: $header-background-color;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		text-align: center;
+
+		img {
+			display: none;
+		}
+
+		@include bp(m) {
+		
+			display: table-row;
+			text-align: left;
+	
+			img, h1 {
+				display: table-cell;
+				margin: 0;
+			}
+	
+			h1 {
+				padding-left: 1em;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+.heading-site-title {
+	font-family: $heading-font;
+	letter-spacing: 0.05em;
+
+	-webkit-font-smoothing: antialiased;
+
+	@include bp(m) {
+		font-size: 4em;
+	}
+}
+
+.header-entry {
+	border-bottom: solid 1px $heading-border-color;
+}
+
+.posted-on {
+	font-size: 0.75em;
+	font-style: italic;
+}

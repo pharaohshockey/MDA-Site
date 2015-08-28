@@ -1,0 +1,36 @@
+//--------------------//
+// Color Palette      //
+//--------------------//
+$blue-zodiac:      rgb(16,31,72);    // Blue Zodiac
+$lightning-yellow: rgb(255,195,37);  // Lightning Yellow
+$mine-shaft:       rgb(45,45,45);    // Mine Shaft
+$dove-gray:        rgb(91,91,91);    // Dove Gray
+$silver:           rgb(194,194,194); // Silver
+$silver-chalice:   rgb(164,164,164); // Silver Chalice
+$white:            rgb(255,255,255); // White
+
+//--------------------
+$primary-color:   $blue-zodiac;
+$secondary-color: $lightning-yellow;
+
+//--------------------//
+// Text Colors        //
+//--------------------//
+$primary-text-color:   $mine-shaft;
+$primary-link-color:   $primary-color;
+$secondary-link-color: $secondary-color;
+$heading-link-color:   $primary-text-color;
+
+//--------------------//
+// Border Colors      //
+//--------------------//
+$border-color:         $dove-gray;
+$heading-border-color: $secondary-color;
+
+//--------------------//
+// Background Colors  //
+//--------------------//
+$header-background-color:  $primary-color;
+$hero-background-color:    transparentize($primary-color, 0.33);
+$footer-background-color:  $primary-color;
+$sidebar-background-color: $primary-color;

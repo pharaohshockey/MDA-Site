@@ -1,0 +1,89 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	color: $primary-text-color;
+	font-family: $body-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: $heading-line-height;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	border-bottom: solid 1px $heading-border-color;
+	margin-bottom: 0.33em;
+}
+
+ul,
+ol,
+dl {
+	margin-bottom: 1em;
+	margin-left: 1em;
+	padding-left: 0.5em;
+}
+
+li,
+dd {
+	line-height: $body-line-height;
+}
+
+p {
+	line-height: $body-line-height;
+	margin-bottom: 1em;
+}
+
+a {
+	color: $primary-link-color;
+}
+
+.heading-entry {
+	border-bottom: none;
+
+	a {
+		color: $heading-link-color;
+		text-decoration: none;
+	}
+}
+
+.heading-page {
+	color: $primary-color;
+	border-bottom: none;
+	font-size: 2em;
+	margin-bottom: 1em;
+}
+
+.container:not(.container-hero) {
+	margin: 0 auto;
+	padding: 1em;
+
+	@include bp(m) {
+		padding: 1em 0;
+		width: 80%;
+		max-width: 60em;
+	}
+}
+
+.clearfix {
+	clear: both;
+
+	&:before, &:after {
+		display: table;
+	}
+}
