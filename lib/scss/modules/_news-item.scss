@@ -1,0 +1,23 @@
+.news-item {
+	background-color: $secondary-color;
+	border-radius: 1em 0 1em 0;
+	float: left;
+	margin-bottom: 0.66em;
+	padding: 1em;
+	width: 100%;
+
+	.thumbnail-listing {
+		display: none;
+	}
+
+	@include bp(xm) {
+		background-color: transparent;
+		border-radius: 0;
+		padding: 0;
+
+		.thumbnail-listing {
+			display: block;
+			text-align: center;
+		}
+	}
+}

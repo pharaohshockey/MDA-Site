@@ -1,0 +1,59 @@
+// I've pared down the media queries and simplified things a bit, 
+// but huge props to Joe Richardson (@joericho) for the Lemonade grid.
+// http://lemonade.im
+// https://github.com/dope/lemonade
+
+//----------------------//
+// Config               //
+//----------------------//
+$col-padding: 0.3em;
+// - Number of columns
+$start:       1;
+$end:         12;
+
+// Attribute selector to grab all col classes
+[class*='col-'] {
+    float: left;
+    padding: $col-padding;
+}
+
+// Loop through all of the column values in the range set above.
+// Mobile first. Everything's full width!
+@for $i from $start through $end {
+    .col-#{$i} {
+        width: 100%
+    }
+}
+
+// Some layout changes once we hit the $m breakpoint
+@media (min-width: $m) {
+    .col-4,
+    .col-6,
+    .col-8,
+    .col-10,
+    .col-12 {
+        width: 50%;
+    }
+
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-5,
+    .col-7,
+    .col-9,
+    .col-11 {
+        width: 100%;
+    }
+}
+
+// Once we hit $xm, our larger screen layout should be safe
+@media (min-width: $xm) {
+
+	// Create grid widths (1-12)
+	@for $i from $start through $end {
+	    .col-#{$i} {
+	    	// Divide the column value by the total number of columns to get a percentage value for the width.
+	        width: percentage($i / $end);
+	    }
+	}     
+}

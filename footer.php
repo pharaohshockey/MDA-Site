@@ -8,7 +8,7 @@
 	*/
 ?>
 
-		<footer class="footer-main">
+		<footer class="footer-main clearfix">
 			<div class="container">
 				<p>&copy; <?php echo date(Y); ?> <?php bloginfo('name'); ?> - <a class="external" href="http://mcghen.com">McGhen Web Development</a></p>
 			</div>

@@ -15,7 +15,7 @@
 		?>
 			<div class="hero">
 				<div class="container container-hero">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail('hero'); ?>
 				</div>
 			</div>
 		<?php

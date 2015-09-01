@@ -17,7 +17,7 @@
 		?>
 			<div class="hero">
 				<div class="container container-hero">
-					<?php the_post_thumbnail(); ?>
+					<?php the_post_thumbnail('hero'); ?>
 				</div>
 			</div>
 		<?php
@@ -34,7 +34,7 @@
 					endif;
 				?>
 			</section>
-			<section class="col-3">
+			<section class="col-3 container-sidebar">
 				<h2>Sponsors</h2>
 				<div class="sidebar">
 					<?php
@@ -49,7 +49,7 @@
 						// Make sure we have sponsors to list.
 						if ($sponsors->have_posts()) :
 					?>
-						<ul class="list-col-2">
+						<ul>
 							<?php
 								// List 'em
 								while ($sponsors->have_posts()) : $sponsors->the_post();
@@ -97,17 +97,17 @@
 					while ($feed->have_posts()) : $feed->the_post();
 				?>
 
-						<div class="news-item">
+						<div class="news-item clearfix">
 
 							<?php
 								// If the post has a thumbnail, add it to the left.
 								if (has_post_thumbnail()) :
 							?>
 								<div class="col-3 thumbnail-listing">
-									<?php the_post_thumbnail('thumbnail'); ?>
+									<a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 								</div>
 								<div class="col-9">
-									<h3><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
+									<h3 class="heading-entry"><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
 
 									<?php the_excerpt(); ?>
 								</div>
