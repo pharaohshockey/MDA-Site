@@ -5,6 +5,9 @@
 }
 
 .container-card {
+	max-width: 18.75em;
+	margin: 0 auto;
+
 	img {
 		display: block;
 		margin: 0 auto 0.5em;
@@ -12,6 +15,12 @@
 		height: auto;
 		max-width: 18.75em;
 	}
+}
+
+.position {
+	font-style: italic;
+	display: block;
+	font-size: 0.8em;
 }
 
 @include bp(m) {
@@ -28,6 +37,7 @@
 	.card.with-img {
 		.details {
 			position: absolute;
+			top: 0;
 			bottom: 0;
 			padding: 0.625em;
 			width: 100%;

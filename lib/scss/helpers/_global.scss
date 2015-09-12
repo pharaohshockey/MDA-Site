@@ -15,20 +15,26 @@ body {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
 	line-height: $heading-line-height;
 }
 
-h2,
-h3,
 h4,
 h5,
 h6 {
+	font-size: $subheading-font-size;
+	line-height: $subheading-line-height;
+}
+
+h2,
+h3 {
 	border-bottom: solid 1px $heading-border-color;
 	margin-bottom: 0.33em;
+}
+
+h2,
+h3 {
+	color: $heading-text-color;
 }
 
 ul,
@@ -51,22 +57,24 @@ p {
 
 a {
 	color: $primary-link-color;
+	transition: all linear 0.3s;
+
+	&:hover {
+		color: $secondary-link-color;
+		transition: all linear 0.3s;
+	}
 }
 
-.heading-entry {
+.heading-entry,
+.heading-page {
 	border-bottom: none;
+	color: $primary-color;
+	margin-bottom: 1em;
 
 	a {
 		color: $heading-link-color;
 		text-decoration: none;
 	}
-}
-
-.heading-page {
-	color: $primary-color;
-	border-bottom: none;
-	font-size: 2em;
-	margin-bottom: 1em;
 }
 
 .container:not(.container-hero) {
