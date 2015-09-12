@@ -37,6 +37,14 @@
 	@include bp(m) {
 		font-size: 4em;
 	}
+
+	@include bp(l) {
+		font-size: 5em;
+	}
+
+	@include bp(xl) {
+		font-size: 6em;
+	}
 }
 
 .header-entry {
