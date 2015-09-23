@@ -29,7 +29,7 @@
 					if (have_posts()) :
 						while (have_posts()) : the_post();
 							if (!is_front_page()) :
-								the_title('<h2 class="heading-entry">', '</h2>'); 
+								the_title('<h2 class="heading-entry">', '</h2>');
 							endif;
 
 							the_content();
@@ -57,7 +57,7 @@
 					if ($board_members->have_posts()) :
 				?>
 
-					<h3 class="heading-entry">Board of Directors</h3>
+					<h3>Board of Directors</h3>
 					<ul class="listing-cards">
 
 					<?php
@@ -73,7 +73,7 @@
 										<h4>
 											<?php the_title(); ?>
 											<span class="position">
-												<?php 
+												<?php
 													get_position_held();
 												?>
 											</span>
@@ -86,7 +86,7 @@
 									<h4>
 										<?php the_title(); ?>
 										<span class="position">
-											<?php 
+											<?php
 												get_position_held();
 											?>
 										</span>
@@ -95,7 +95,7 @@
 								</div>
 							<?php endif; ?>
 						</li>
-					<?php 
+					<?php
 						endwhile; // We're done with the board
 					?>
 				</ul> <!-- /list of board members -->

@@ -32,6 +32,7 @@ $heading-border-color: $primary-color;
 // Background Colors  //
 //--------------------//
 $header-background-color:  $primary-color;
-$hero-background-color:    transparentize($primary-color, 0.33);
+$hero-background-color:    transparentize($primary-color, 0.2);
 $footer-background-color:  $primary-color;
 $sidebar-background-color: $primary-color;
+$listing-background-color: $hero-background-color;

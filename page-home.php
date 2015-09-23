@@ -62,8 +62,8 @@
 										foreach ($sponsor_url as $key => $value) {
 									?>
 									<a class="external" href="<?php echo $value; ?>">
-										<?php 
-											// We know the sponsors will have a featured image, so we'll get right to it. 
+										<?php
+											// We know the sponsors will have a featured image, so we'll get right to it.
 											// Use the 'thumbnail' name to get a consistent width
 											the_post_thumbnail('thumbnail');
 										?>
@@ -84,47 +84,49 @@
 				</div>
 			</section>
 			<section class="container-listing clearfix">
-				<h2>News</h2>
-				<?php
-					$feed_args = array (
-						'post_type'      => 'post',
-						'orderby'        => 'date',
-						'order'          => 'DESC',
-						'posts_per_page' => 5);
+				<div class="listing">
+					<h2>News</h2>
+					<?php
+						$feed_args = array (
+							'post_type'      => 'post',
+							'orderby'        => 'date',
+							'order'          => 'DESC',
+							'posts_per_page' => 5);
 
-					$feed = new WP_Query($feed_args);
-					
-					while ($feed->have_posts()) : $feed->the_post();
-				?>
+						$feed = new WP_Query($feed_args);
 
-						<div class="news-item clearfix">
+						while ($feed->have_posts()) : $feed->the_post();
+					?>
 
-							<?php
-								// If the post has a thumbnail, add it to the left.
-								if (has_post_thumbnail()) :
-							?>
-								<div class="col-3 thumbnail-listing">
-									<a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
-								</div>
-								<div class="col-9">
+							<div class="news-item">
+
+								<?php
+									// If the post has a thumbnail, add it to the left.
+									if (has_post_thumbnail()) :
+								?>
+									<div class="col-3 thumbnail-listing">
+										<a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+									</div>
+									<div class="col-9">
+										<h3 class="heading-entry"><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
+
+										<?php the_excerpt(); ?>
+									</div>
+								<?php
+									// If it doesn't have a thumbnail, don't sweat it.
+									else :
+								?>
 									<h3 class="heading-entry"><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
+								<?php
+										the_excerpt();
+									endif;
+								?>
+							</div>
 
-									<?php the_excerpt(); ?>
-								</div>
-							<?php
-								// If it doesn't have a thumbnail, don't sweat it.
-								else :
-							?>
-								<h3 class="heading-entry"><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
-							<?php
-									the_excerpt();
-								endif; 
-							?>
-						</div>
-
-				<?php
-					endwhile;
-				?>
+					<?php
+						endwhile;
+					?>
+				</div>
 			</section>
 		</div>
 	</main>

@@ -1,0 +1,28 @@
+.listing {
+	background-color: $listing-background-color;
+	border-bottom: solid 1em $secondary-color;
+	color: #fff;
+	float: left;
+	margin-bottom: 0.5em;
+	padding-top: 1em;
+	position: relative;
+
+	&:before, &:after {
+		content: '';
+		position: absolute;
+		background-color: $listing-background-color;
+		border-bottom: solid 1em $secondary-color;
+		display: inline-block;
+		top: 0;
+		bottom: -1em;
+		width: 100%;
+	}
+
+	&:before {
+		right: 100%;
+	}
+
+	&:after {
+		left: 100%;
+	}
+}

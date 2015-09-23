@@ -61,6 +61,7 @@ a {
 
 	&:hover {
 		color: $secondary-link-color;
+		cursor: pointer;
 		transition: all linear 0.3s;
 	}
 }
@@ -69,11 +70,13 @@ a {
 .heading-page {
 	border-bottom: none;
 	color: $primary-color;
-	margin-bottom: 1em;
 
 	a {
 		color: $heading-link-color;
-		text-decoration: none;
+
+		&:hover {
+			color: $secondary-link-color;
+		}
 	}
 }
 

@@ -11,17 +11,18 @@
 		}
 
 		@include bp(m) {
-		
+
 			display: table-row;
 			text-align: left;
-	
+
 			img, h1 {
 				display: table-cell;
 				margin: 0;
 			}
-	
+
 			h1 {
 				padding-left: 1em;
+				text-shadow: -0.025em 0.05em 0.05em #000;
 				vertical-align: middle;
 			}
 		}
@@ -45,10 +46,6 @@
 	@include bp(xl) {
 		font-size: 6em;
 	}
-}
-
-.header-entry {
-	border-bottom: solid 1px $heading-border-color;
 }
 
 .posted-on {
