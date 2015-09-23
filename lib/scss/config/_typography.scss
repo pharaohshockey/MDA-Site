@@ -13,14 +13,15 @@
 
 }
 
-$primary-font-family:   Cabin, Helvetica, sans-serif;
-$secondary-font-family: 'Sablon Up', Helvetica, sans-serif;
+$primary-font-family:    Cabin, Helvetica, sans-serif;
+$secondary-font-family:  'Sablon Up', Helvetica, sans-serif;
 
-$body-font:    $primary-font-family;
-$heading-font: $secondary-font-family;
+$body-font:              $primary-font-family;
+$heading-font:           $secondary-font-family;
 
-$body-line-height:    1.5;
-$heading-line-height: 0.7;
+$body-line-height:       1.5;
+$heading-line-height:    1.25;
 $subheading-line-height: 1;
 
-$subheading-font-size: 1.25em;
+$heading-font-size:      2em;
+$subheading-font-size:   1.25em;

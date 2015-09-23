@@ -114,6 +114,9 @@
 							<?php
 								// If it doesn't have a thumbnail, don't sweat it.
 								else :
+							?>
+								<h3 class="heading-entry"><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
+							<?php
 									the_excerpt();
 								endif; 
 							?>

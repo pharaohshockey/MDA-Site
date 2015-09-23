@@ -12,7 +12,7 @@
 
 	<main id="main-content" role="main">
 		<?php
-			if (has_post_thumbnail()) :
+			if (!is_home() && has_post_thumbnail()) :
 		?>
 			<div class="hero">
 				<div class="container container-hero">
@@ -31,7 +31,7 @@
 						if (is_home() && !is_front_page()) :
 				?>
 					<header class="header-page">
-						<h2 class="heading-page"><?php single_post_title(); ?></h2>
+						<h2><?php single_post_title(); ?></h2>
 					</header>
 				<?php
 						endif; 
