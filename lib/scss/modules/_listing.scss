@@ -1,21 +1,29 @@
 .listing {
 	background-color: $listing-background-color;
-	border-bottom: solid 1em $secondary-color;
+	border-bottom: solid 1em transparent;
 	color: #fff;
 	float: left;
 	margin-bottom: 0.5em;
 	padding-top: 1em;
 	position: relative;
 
+	@include bp(xm) {
+		border-color: $secondary-color;
+	}
+
 	&:before, &:after {
 		content: '';
 		position: absolute;
 		background-color: $listing-background-color;
-		border-bottom: solid 1em $secondary-color;
+		border-bottom: solid 1em transparent;
 		display: inline-block;
 		top: 0;
 		bottom: -1em;
 		width: 100%;
+
+		@include bp(xm) {
+			border-color: $secondary-color;
+		}
 	}
 
 	&:before {
