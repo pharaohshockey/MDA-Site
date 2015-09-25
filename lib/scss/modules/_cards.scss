@@ -21,6 +21,16 @@
 	font-style: italic;
 	display: block;
 	font-size: 0.8em;
+
+	a & {
+		color: $primary-text-color;
+	}
+}
+
+.details {
+	a {
+		text-decoration: none;
+	}
 }
 
 @include bp(m) {

@@ -56,7 +56,6 @@
 									<a class="external" href="<?php echo $value; ?>">
 										<?php
 											// We know the sponsors will have a featured image, so we'll get right to it.
-											// Use the 'thumbnail' name to get a consistent width
 											the_post_thumbnail('thumbnail');
 										?>
 									</a>
