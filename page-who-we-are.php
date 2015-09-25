@@ -13,15 +13,7 @@
 
 	<main id="main-content" role="main">
 		<?php
-			if (has_post_thumbnail()) :
-		?>
-			<div class="hero">
-				<div class="container container-hero">
-					<?php the_post_thumbnail('hero'); ?>
-				</div>
-			</div>
-		<?php
-			endif;
+			get_template_part('includes/hero');
 		?>
 		<div class="container">
 			<section class="container-overview">
@@ -46,11 +38,13 @@
 										'orderby'   => 'menu_order');
 					$board_members = new WP_Query($args);
 
-					// Get custom "position_held" field values
-					function get_position_held () {
+					function show_card_link () {
+						// Get custom "position_held" field values
 						$position_value = get_post_custom_values('position_held');
 						foreach ($position_value as $key => $value) {
-							echo "$value";
+							// Create the link and spit it out
+							$card_link = '<a href="'.get_the_permalink().'"><h4>'.get_the_title().'<span class="position">'.$value.'</span></h4></a>';
+							echo "$card_link";
 						}
 					}
 
@@ -70,28 +64,12 @@
 										the_post_thumbnail('medium');
 									?>
 									<div class="details">
-										<h4>
-											<?php the_title(); ?>
-											<span class="position">
-												<?php
-													get_position_held();
-												?>
-											</span>
-										</h4>
-										<?php the_excerpt(); ?>
+										<?php show_card_link(); ?>
 									</div>
 								</div>
 							<?php else : ?>
 								<div class="card">
-									<h4>
-										<?php the_title(); ?>
-										<span class="position">
-											<?php
-												get_position_held();
-											?>
-										</span>
-									</h4>
-									<?php the_excerpt(); ?>
+									<?php show_card_link(); ?>
 								</div>
 							<?php endif; ?>
 						</li>

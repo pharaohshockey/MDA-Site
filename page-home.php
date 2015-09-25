@@ -13,15 +13,7 @@
 
 	<main id="main-content" role="main">
 		<?php
-			if (has_post_thumbnail()) :
-		?>
-			<div class="hero">
-				<div class="container container-hero">
-					<?php the_post_thumbnail('hero'); ?>
-				</div>
-			</div>
-		<?php
-			endif;
+			get_template_part('includes/hero');
 		?>
 		<div class="container">
 			<section class="container-overview col-9">

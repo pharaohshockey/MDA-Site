@@ -12,29 +12,21 @@
 
 	<main id="main-content" role="main">
 		<?php
-			if (!is_home() && has_post_thumbnail()) :
-		?>
-			<div class="hero">
-				<div class="container container-hero">
-					<?php the_post_thumbnail('hero'); ?>
-				</div>
-			</div>
-		<?php
-			endif;
+			get_template_part('includes/hero');
 		?>
 
 		<div class="container">
 			<section class="container-listing">
-				<?php 
-					if (have_posts()) : 
+				<?php
+					if (have_posts()) :
 						// Is this the homepage, but not the front page?
 						if (is_home() && !is_front_page()) :
 				?>
 					<header class="header-page">
-						<h2><?php single_post_title(); ?></h2>
+						<h2 class="heading-entry"><?php single_post_title(); ?></h2>
 					</header>
 				<?php
-						endif; 
+						endif;
 
 						// Start the loop
 						while (have_posts()) : the_post();

@@ -11,15 +11,7 @@
 
 	<main id="main-content" role="main">
 		<?php
-			if (has_post_thumbnail()) :
-		?>
-			<div class="hero">
-				<div class="container container-hero">
-					<?php the_post_thumbnail('hero'); ?>
-				</div>
-			</div>
-		<?php
-			endif;
+			get_template_part('includes/hero');
 		?>
 		<div class="container">
 			<section class="container-overview">
@@ -27,7 +19,7 @@
 					if (have_posts()) :
 						while (have_posts()) : the_post();
 							if (!is_front_page()) :
-								the_title('<h2 class="heading-entry">', '</h2>'); 
+								the_title('<h2 class="heading-entry">', '</h2>');
 							endif;
 
 							the_content();
