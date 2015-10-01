@@ -30,8 +30,8 @@
 
 						// Start the loop
 						while (have_posts()) : the_post();
+							// Get the two column template if we're loading 'board' posts
 							if (get_post_type() == 'board') :
-								// Get the two column template if we're loading 'board' posts
 								get_template_part('content', 'two-col');
 							else :
 								// Get the content
@@ -42,7 +42,6 @@
 					// If there's no content, include the 'No posts found' template.
 					else:
 						get_template_part('content', 'none');
-
 					endif;
 				?>
 			</section>

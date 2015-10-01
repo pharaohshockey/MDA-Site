@@ -16,10 +16,12 @@
 					<?php
 						if (is_single()) :
 							the_title('<h2 class="heading-entry">', '</h2>');
+					?>
+						<h3 class="heading-entry"><?php echo get_field('position_held'); ?></h3>
+					<?php
 						else:
-
-								// %s = name of current post
-								the_title(sprintf('<h3 class="heading-entry"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>');
+							// %s = name of current post
+							the_title(sprintf('<h3 class="heading-entry"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>');
 						endif;
 
 						if (pgg_entry_meta() !== null) {

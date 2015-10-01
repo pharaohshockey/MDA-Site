@@ -60,9 +60,11 @@
 						<li class="container-card">
 							<?php if (has_post_thumbnail()) : ?>
 								<div class="card with-img">
-									<?php
-										the_post_thumbnail('medium');
-									?>
+									<a href="<?php echo get_the_permalink(); ?>">
+										<?php
+											the_post_thumbnail('medium');
+										?>
+									</a>
 									<div class="details">
 										<?php show_card_link(); ?>
 									</div>

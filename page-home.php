@@ -95,10 +95,10 @@
 									// If the post has a thumbnail, add it to the left.
 									if (has_post_thumbnail()) :
 								?>
-									<div class="col-3 thumbnail-listing">
+									<div class="col-2 thumbnail-listing">
 										<a href="<?php echo the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
 									</div>
-									<div class="col-9">
+									<div class="col-10">
 										<h3 class="heading-entry"><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></h3>
 
 										<?php the_excerpt(); ?>
