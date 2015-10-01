@@ -17,7 +17,7 @@
 						if (is_single()) :
 							the_title('<h2 class="heading-entry">', '</h2>');
 						else:
-							
+
 								// %s = name of current post
 								the_title(sprintf('<h3 class="heading-entry"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h3>');
 						endif;
@@ -32,10 +32,14 @@
 			<?php endif; ?>
 			<div class="container-entry">
 				<?php
-					the_content(sprintf(
-						__('Continue reading %s', 'pgg'),
-						the_title('<span class="access">', '</span>', false)
-					));
+					if (is_single()) :
+						the_content(sprintf(
+							__('Continue reading %s', 'pgg'),
+							the_title('<span class="access">', '</span>', false)
+						));
+					else :
+						the_excerpt();
+					endif;
 
 					wp_link_pages(array (
 						'before'      => '<ul class="nav nav-page-links">',
