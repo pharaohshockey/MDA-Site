@@ -21,27 +21,6 @@
 				)
 			)
 		);
-
-		register_post_type('board', array (
-			'labels' => array (
-				'name'          => __('Board Members'),
-				'singular_name' => __('Board Member')
-				),
-			'description'   => 'These folks keep the lights on.',
-			'public'        => true,
-			'menu_position' => 6,
-			'menu_icon'     => 'dashicons-groups',
-			'has_archive'   => true,
-			'supports'      => array (
-				'title',
-				'editor',
-				'thumbnail',
-				'page-attributes',
-				'custom-fields',
-				'excerpt'
-				)
-			)
-		);
 	}
 
 	add_action('init', 'pgg_post_types');
