@@ -1,17 +1,19 @@
 .hero {
-	background-color: $hero-background-color;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-	img {
-		margin-bottom: -0.25em;
-		width: 100%;
-		height: auto;
-	}
+.home-hero {
+  padding: 4rem 0;
+  background-position: 0 -40px;
 
-	@include bp(xm) {
-		.container {
-			margin: 0 auto;
-			width: 80%;
-			max-width: 60em;
-		}
-	}
+  @include bp(xm) {
+    background-position: 0 -120px;
+  }
+
+  .overview {
+    background-color: rgba(255, 255, 255, 0.73);
+    box-shadow: rgba($dark-blue, 0.74) 3px 16px 49px;
+    padding: 4rem 2rem;
+  }
 }

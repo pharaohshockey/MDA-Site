@@ -44,15 +44,16 @@
 
         <a class="access skip-link" href="#main-content">Skip to content</a>
 
-        <header class="header-main" role="banner">
-            <div class="container">
+        <header class="header-main">
+            <div class="container flex flex-row">
                 <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                     <img src="<?php echo get_template_directory_uri(); ?>/lib/img/logo.png" alt="Pharaohs Hockey logo" width="125" height="109">
-                    <h1 class="heading-site-title"><?php bloginfo('name'); ?></h1>
                 </a>
-            </div>
-            <nav class="nav-primary clearfix" role="navigation">
-                <div class="container container-nav-primary">
+                <nav class="nav-primary">
+                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                        <h1 class="heading-site-title"><?php bloginfo('name'); ?></h1>
+                    </a>
+
                     <?php
                         // Primary nav
                         wp_nav_menu(array(
@@ -60,6 +61,7 @@
                             'theme-location' => 'primray',
                         ));
                     ?>
-                </div>
-            </nav>
+
+                </nav>
+            </div>
         </header>
