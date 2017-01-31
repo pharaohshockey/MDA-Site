@@ -1,0 +1,16 @@
+.stripe {
+  background-color: $stripe-background-color;
+
+  h2 {
+    color: $stripe-heading-text-color;
+  }
+
+  .flex {
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  .logo {
+    margin: 0.5rem 1rem;
+  }
+}

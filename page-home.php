@@ -71,55 +71,54 @@
                 ?>
             </div>
         </section>
-			<section class="col-3 container-sidebar">
-				<h2>Sponsors</h2>
-				<div class="sidebar">
-					<?php
-						$sponsors_args = array(
-							'post_type' => 'sponsors',
-							'orderby'   => 'date',
-							'order'     => 'DESC',
-						);
+		<section class="stripe">
+            <div class="container">
+    			<h2>Sponsors</h2>
+    			<div class="flex">
+    				<?php
+    					$sponsors_args = array(
+    						'post_type' => 'sponsors',
+    						'orderby'   => 'date',
+    						'order'     => 'DESC',
+    					);
 
-						$sponsors = new WP_Query($sponsors_args);
+    					$sponsors = new WP_Query($sponsors_args);
 
-						// Make sure we have sponsors to list.
-						if ($sponsors->have_posts()) :
-					?>
-						<ul>
-							<?php
-								// List 'em
-								while ($sponsors->have_posts()) : $sponsors->the_post();
-							?>
-								<li>
-									<?php
-										// The 'sponsor' custom post type uses a 'partner_url' custom field to collect the link to the partner's website.
-										// Let's grab the value of that field and create the link.
-										$sponsor_url = get_post_custom_values('partner_url');
-										foreach ($sponsor_url as $key => $value) {
-									?>
-									<a class="external" href="<?php echo $value; ?>">
-										<?php
-											// We know the sponsors will have a featured image, so we'll get right to it.
-											the_post_thumbnail('thumbnail');
-										?>
-									</a>
-									<?php } ?>
-								</li>
-							<?php
-								endwhile;
-							?>
-						</ul>
-					<?php
-						else:
-					?>
-						<p>Sponsorship opportunities available.</p>
-					<?php
-						endif;
-					?>
-				</div>
-			</section>
-		</div>
+    					// Make sure we have sponsors to list.
+    					if ($sponsors->have_posts()) {
+    				?>
+    						<?php
+    							// List 'em
+    							while ($sponsors->have_posts()) : $sponsors->the_post();
+    						?>
+                                <div class="logo">
+    								<?php
+    									// The 'sponsor' custom post type uses a 'partner_url' custom field to collect the link to the partner's website.
+    									// Let's grab the value of that field and create the link.
+    									$sponsor_url = get_post_custom_values('partner_url');
+    									foreach ($sponsor_url as $sponsor => $url) {
+    								?>
+    								<a class="external" href="<?php echo $url; ?>">
+    									<?php
+    										// We know the sponsors will have a featured image, so we'll get right to it.
+    										the_post_thumbnail('thumbnail');
+    									?>
+    								</a>
+    								<?php } ?>
+                                </div>
+    						<?php
+    							endwhile;
+    						?>
+    				<?php
+    					} else {
+    				?>
+    					<p>Sponsorship opportunities available.</p>
+    				<?php
+    					}
+    				?>
+    			</div>
+            </div>
+		</section>
 	</main>
 
 <?php

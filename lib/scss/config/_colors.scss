@@ -12,8 +12,14 @@ $primary-link-hover-color: $yellow;
 $main-nav-link-color: $yellow;
 $heading-text-color: $dark-blue;
 $heading-link-color: $primary-text-color;
+$stripe-heading-text-color: $yellow;
 
 // Background Colors
 
-$header-background-color:  $dark-blue;
-$footer-background-color:  transparent;
+$header-background-color: $dark-blue;
+$stripe-background-color: $header-background-color;
+$footer-background-color: transparent;
+
+$primary-color: $dark-blue;
+$secondary-color: $yellow;
+$border-color: #c2c2c2;

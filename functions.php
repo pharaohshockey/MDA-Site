@@ -15,7 +15,6 @@
 	include 'includes/fonts.php';
 	include 'includes/enqueue-scripts.php';
 	// include 'includes/theme-options.php';
-	include 'includes/custom-post-types.php';
 
 	require 'includes/template-tags.php';
 ?>
