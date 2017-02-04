@@ -1,0 +1,21 @@
+.nav-mobile {
+  display: none;
+
+  @include bp(mm) {
+    color: $main-nav-link-color;
+    padding: 0.25rem 0.5rem;
+    border: solid 1px $main-nav-link-color;
+    border-radius: 33px;
+    font-size: 0.8rem;
+    display: block;
+    position: absolute;
+    z-index: 20000;
+    right: 4%;
+    top: 8%;
+  }
+}
+
+.nav-mobile-toggle {
+  position: absolute;
+  left: -9999rem;
+}

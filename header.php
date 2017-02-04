@@ -46,13 +46,16 @@
 
         <header class="header-main">
             <div class="container flex flex-row">
-                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+                <a href="<?php echo esc_url(home_url('/')); ?>" rel="home" class="logo-link">
                     <img src="<?php echo get_template_directory_uri(); ?>/lib/img/logo.png" alt="Pharaohs Hockey logo" width="125" height="109">
                 </a>
                 <nav class="nav-primary">
                     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                         <h1 class="heading-site-title"><?php bloginfo('name'); ?></h1>
                     </a>
+
+                    <label for="nav-mobile" class="nav-mobile">Menu</label>
+                    <input type="checkbox" id="nav-mobile" class="nav-mobile-toggle">
 
                     <?php
                         // Primary nav
