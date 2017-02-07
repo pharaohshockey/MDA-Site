@@ -20,4 +20,12 @@
 	@if $point == xl {
 		@media(min-width: $xl) {@content;}
 	}
+
+  @if $point == mxs {
+    @media(max-width: $xs) {@content;}
+  }
+
+  @if $point == mm {
+    @media(max-width: $m) {@content;}
+  }
 }

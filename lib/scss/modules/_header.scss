@@ -6,49 +6,35 @@
 		text-decoration: none;
 		text-align: center;
 
-		img {
+		&.logo-link {
 			display: none;
 		}
 
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+
 		@include bp(m) {
-
-			display: table-row;
-			text-align: left;
-
-			img, h1 {
-				display: table-cell;
-				margin: 0;
-			}
-
-			h1 {
-				padding-left: 1em;
-				text-shadow: -0.025em 0.05em 0.05em #000;
-				vertical-align: middle;
-			}
+      &.logo-link {
+        display: block;
+      }
 		}
 	}
 }
 
 .heading-site-title {
 	font-family: $heading-font;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.05rem;
 
 	-webkit-font-smoothing: antialiased;
 
 	@include bp(m) {
-		font-size: 4em;
-	}
-
-	@include bp(l) {
-		font-size: 5em;
-	}
-
-	@include bp(xl) {
-		font-size: 6em;
+		font-size: 3.5rem;
 	}
 }
 
 .posted-on {
-	font-size: 0.75em;
+	font-size: 0.75rem;
 	font-style: italic;
 }

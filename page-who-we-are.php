@@ -60,13 +60,15 @@
 						<li class="container-card">
 							<?php if (has_post_thumbnail()) : ?>
 								<div class="card with-img">
-									<a href="<?php echo get_the_permalink(); ?>">
-										<?php
-											the_post_thumbnail('medium');
-										?>
-									</a>
+									<?php
+										the_post_thumbnail('medium');
+									?>
 									<div class="details">
-										<?php show_card_link(); ?>
+                                        <h2 class="card-title">
+                                            <?php the_title(); ?>
+                                            <span><?php echo get_field('position_held'); ?></span>
+                                        </h2>
+										<?php the_content(); ?>
 									</div>
 								</div>
 							<?php else : ?>
