@@ -60,9 +60,11 @@
 						<li class="container-card">
 							<?php if (has_post_thumbnail()) : ?>
 								<div class="card with-img">
-									<?php
-										the_post_thumbnail('medium');
-									?>
+                                    <div class="img">
+    									<?php
+    										the_post_thumbnail('headshot');
+    									?>
+                                    </div>
 									<div class="details">
                                         <h2 class="card-title">
                                             <?php the_title(); ?>
